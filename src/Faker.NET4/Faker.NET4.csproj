@@ -106,6 +106,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Phone.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\SouthAfrican.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SouthAfrican.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SouthAfrican.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Address.de-DE.resx" />
@@ -142,6 +148,11 @@
     <EmbeddedResource Include="Resources\Phone.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Phone.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SouthAfrican.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SouthAfrican.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
