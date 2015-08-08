@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using Faker.Extensions;
 
 namespace Faker
@@ -35,7 +36,7 @@ namespace Faker
 
         public static string IdNumber(int maxAge = 100, int minAge = 18)
         {
-            var random = new Random((int)DateTime.Now.Ticks);
+            var random = new CryptoRandom();
             int year = random.Next(DateTime.Today.Year - maxAge, DateTime.Today.Year - minAge);
             int month = random.Next(1, 12);
             int day = random.Next(1, DateTime.DaysInMonth(year, month));
@@ -83,5 +84,66 @@ namespace Faker
             }
             catch {/*ignore*/} return d;
         }
+    }
+}
+
+//http://thinketg.com/how-to-generate-better-random-numbers-in-c-net-2/
+public class CryptoRandom : RandomNumberGenerator
+{
+    private static RandomNumberGenerator r;
+
+    ///<summary>
+    /// Creates an instance of the default implementation of a cryptographic random number generator that can be used to generate random data.
+    ///</summary>
+    public CryptoRandom()
+    {
+        r = RandomNumberGenerator.Create();
+    }
+
+    public override void GetBytes(byte[] data)
+    {
+        r.GetBytes(data);
+    }
+
+    public override void GetNonZeroBytes(byte[] data)
+    {
+        r.GetNonZeroBytes(data);
+    }
+
+    ///<summary>
+    /// Returns a random number between 0.0 and 1.0.
+    ///</summary>
+    public double NextDouble()
+    {
+        byte[] b = new byte[4];
+        r.GetBytes(b);
+        return (double)BitConverter.ToUInt32(b, 0) / UInt32.MaxValue;
+    }
+
+    ///<summary>
+    /// Returns a random number within the specified range.
+    ///</summary>
+    ///<param name="minValue">The inclusive lower bound of the random number returned.</param>
+    ///<param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+    public int Next(int minValue, int maxValue)
+    {
+        return (int)Math.Round(NextDouble() * (maxValue - minValue - 1)) + minValue;
+    }
+
+    ///<summary>
+    /// Returns a nonnegative random number.
+    ///</summary>
+    public int Next()
+    {
+        return Next(0, Int32.MaxValue);
+    }
+
+    ///<summary>
+    /// Returns a nonnegative random number less than the specified maximum
+    ///</summary>
+    ///<param name="maxValue">The inclusive upper bound of the random number returned. maxValue must be greater than or equal 0</param>
+    public int Next(int maxValue)
+    {
+        return Next(0, maxValue);
     }
 }
