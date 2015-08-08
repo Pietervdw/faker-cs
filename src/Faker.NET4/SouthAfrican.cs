@@ -39,7 +39,7 @@ namespace Faker
             int year = random.Next(DateTime.Today.Year - maxAge, DateTime.Today.Year - minAge);
             int month = random.Next(1, 12);
             int day = random.Next(1, DateTime.DaysInMonth(year, month));
-            int gender = random.Next(1, 9999);
+            int gender = random.Next(1, 9999); // If < 5000 Then Female. If >= 5000 Then Male
             int countryId = 0; // 0 = South Africa, 1 = Other
             int secondLastDigit = random.Next(0, 9);
             int controlDigit = 0;
