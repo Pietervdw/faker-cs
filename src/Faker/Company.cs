@@ -11,6 +11,35 @@ namespace Faker
             return NameFormats.Random();
         }
 
+        /// <summary>
+        /// Data sourced from http://www.fakenamegenerator.com
+        /// </summary>
+        /// <returns>1 of 3000 random Company Names</returns>
+        public static string CompanyName()
+        {
+            
+            return Resources.Company.CompanyNames.Split(Config.Separator).Random().Trim();
+        }
+
+        /// <summary>
+        /// Data sourced from http://www.fakenamegenerator.com
+        /// </summary>
+        /// <returns>1 of 3000 random Job Titles</returns>
+        public static string JobTitle()
+        {
+
+            return Resources.Company.JobTitles.Split(Config.Separator).Random().Trim();
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <returns>1 of 4000+ random Products</returns>
+        public static string Product()
+        {
+
+            return Resources.Company.Products.Split(Config.Separator).Random().Trim();
+        }
+
         public static string Suffix()
         {
             return Resources.Company.Suffix.Split(Config.Separator).Random();

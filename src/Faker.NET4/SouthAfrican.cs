@@ -13,7 +13,7 @@ namespace Faker
         /// <summary>
         /// Data sourced from http://www.name-statistics.org/za/prenumecomune.php
         /// </summary>
-        /// <returns>1 of 1000 most common South African first anmes</returns>
+        /// <returns>1 of 1000 most common South African first names</returns>
         public static string Firstname()
         {
             return Resources.SouthAfrican.Firstname.Split(Config.Separator).Random().Trim();
