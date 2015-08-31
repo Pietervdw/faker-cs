@@ -124,7 +124,7 @@ namespace Faker.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hill-Behan;Megatronic Plus;BASCO;Maxi-Tech;Edge Garden Services;Awthentikz;Fresh Start;Champion Auto;All Wound Up;Mostow Co.;Liberty Wealth Planners;Egghead Software;Fresh Start;The Warner Brothers Store;Naugles;Plan Future;Jewel Mart;CompuAdd;Suadela Investment;Total Yard Management;Strong Life;Sounds of Soul Records &amp; Tapes;Plunkett Home Furnishings;Rex Audio Video Appliance;Terra Nova Garden Services;Hamady Bros. Supermarkets;Nedick&apos;s;Earl Abel&apos;s;Laneco;Netcore;Compact Disc Center;StopGrey;One-Up Realtor [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Simply Save;Gamma Gas;TheBottomHalf;Opticomp;Access Asia;Montana&apos;s Cookhouse;Hills Supermarkets;A Plus Lawn Care;Greyvoid;The Flying Bear;Nedick&apos;s;Good Times;Monk Home Loans;Harold Powell;Witmark;First Rate Choice;Starship Tapes &amp;amp; Records;Endicott Shoes;Miller &amp;amp; Rhoads;Silo;Ukrop&apos;s Super Market;Belle Ladi;Richman Brothers;Starship Tapes &amp;amp; Records;Earthworks Garden Kare;Play Town;Integra Investment Plan;Hugh M. Woods;Grand Union;K&apos;s Merchandise;Multi Tech Development;Music Den;G.I. Joe&apos;s;Egghead  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CompanyNames {
             get {
@@ -133,7 +133,7 @@ namespace Faker.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abstractor;Account Representative;Accountant;Accounting Clerk;Accounting Manager;Accounting Section Supervisor;Accounting Supervisor;Accounts Payable Clerk;Accounts Receivable Clerk;Accounts Receivable Supervisor;Accounts Payable Supervisor;Activities Assistant;Activities Coordinator;Activities Therapist;Actuarial Technician;Actuary;Claims Adjuster;Administrative Analyst;Administrative Assistant;Administrative Clerk;Administrative Secretary;Admissions Manager;Adult Day Care Director;Adult Day Care Superviso [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Aquaculture farmer;Employment assistant;Log mover;Public relations consultant;Precision instrument and equipment repairer;Revenue agent;Cash manager;High school counselor;Industrial relations manager;Hairdresser;Commodities trader;Screen printing machine operator;Oncology nurse;Public accountant;Diesel service mechanic;Allopathic surgeon;Marketing research analyst;Parole officer;Bookkeeper;Photoengraver;Sheet metal worker;Auditor;Correctional treatment specialist;Clinical social worker;Periodontist;Employme [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string JobTitles {
             get {
